@@ -1,12 +1,14 @@
 {
   "name": "@elbwalker/types",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "All the elbwalker types",
   "author": "elbwalker GmbH <hello@elbwalker.com>",
+  "types": "types/index.d.ts",
   "files": [
-    "types/*.d.ts"
+    "types/**/*"
   ],
   "scripts": {
+    "publish": "npm publish --access public",
     "test": "exit 0"
   },
   "repository": {
@@ -25,7 +27,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/elbwalker/elb-types/issues"
+    "url": "https://github.com/elbwalker/walker.js/issues"
   },
-  "homepage": "https://github.com/elbwalker/elb-types#readme"
+  "homepage": "https://github.com/elbwalker/walker.js#readme"
 }
