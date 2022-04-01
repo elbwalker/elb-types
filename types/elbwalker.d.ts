@@ -3,15 +3,18 @@ import { Walker } from './walker';
 
 export declare namespace Elbwalker {
   interface Function {
-    go: (projectId?: string) => void;
-    load: () => void;
-    run: () => void;
+    go: (config?: Config) => void;
     push: (
       event: string,
       data?: AnyObject,
       trigger?: string,
       nested?: Walker.Entities,
     ) => void;
+  }
+
+  interface Config {
+    custom?: boolean;
+    projectId?: string;
   }
 
   type Events = Event[];
@@ -29,6 +32,7 @@ export declare namespace Elbwalker {
     timing: number;
     group: string;
     count: number;
+    // @TODO version: number;
   }
 
   interface ElbLayer {
@@ -47,7 +51,12 @@ export declare namespace Elbwalker {
   }
 
   const enum Commands {
+    Action = 'action',
+    Config = 'config',
+    Consent = 'consent',
     Destination = 'destination',
+    Globals = 'globals',
+    Run = 'run',
     User = 'user',
     Walker = 'walker',
   }
