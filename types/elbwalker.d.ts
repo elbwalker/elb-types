@@ -1,3 +1,4 @@
+import { WebDestination } from '@elbwalker/types/types/destinations';
 import { AnyObject } from './globals';
 import { Walker } from './walker';
 
@@ -5,12 +6,15 @@ export declare namespace Elbwalker {
   interface Function {
     go: (config?: Config) => void;
     push: (
-      event: string,
-      data?: AnyObject,
+      event?: string,
+      data?: PushData,
       trigger?: string,
       nested?: Walker.Entities,
     ) => void;
   }
+
+  type ElbLayer = [string?, Elbwalker.PushData?, string?, Walker.Entities?];
+  type PushData = AnyObject | WebDestination.Function;
 
   interface Config {
     custom?: boolean;
@@ -33,15 +37,6 @@ export declare namespace Elbwalker {
     group: string;
     count: number;
     // @TODO version: number;
-  }
-
-  interface ElbLayer {
-    push: (
-      event?: string,
-      data?: unknown,
-      trigger?: string,
-      nested?: Walker.Entities,
-    ) => void;
   }
 
   interface User {
