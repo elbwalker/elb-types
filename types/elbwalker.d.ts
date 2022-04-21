@@ -1,4 +1,4 @@
-import { WebDestination } from '@elbwalker/types/types/destinations';
+import { WebDestination } from './destinations';
 import { AnyObject } from './globals';
 import { Walker } from './walker';
 
@@ -19,6 +19,7 @@ export declare namespace Elbwalker {
   interface Config {
     custom?: boolean;
     projectId?: string;
+    version?: number;
   }
 
   type Events = Event[];
@@ -36,7 +37,7 @@ export declare namespace Elbwalker {
     timing: number;
     group: string;
     count: number;
-    // @TODO version: number;
+    version: Version;
   }
 
   interface User {
@@ -54,5 +55,10 @@ export declare namespace Elbwalker {
     Run = 'run',
     User = 'user',
     Walker = 'walker',
+  }
+
+  interface Version {
+    walker: number;
+    config: number;
   }
 }
