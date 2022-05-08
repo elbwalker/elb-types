@@ -10,7 +10,7 @@ export declare namespace WebDestination {
   }
 
   interface Config {
-    custom: AnyObject; // Arbitrary but protected configurations for custom enhancements
+    custom?: AnyObject; // Arbitrary but protected configurations for custom enhancements
     init?: boolean; // if the destination has been initialized by calling the init method
     mapping?: Mapping; // a map to handle events individually
   }
