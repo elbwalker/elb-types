@@ -6,14 +6,19 @@ export declare namespace Elbwalker {
   interface Function {
     go: (config?: Config) => void;
     push: (
-      event?: string,
+      event?: IArguments | unknown,
       data?: PushData,
       trigger?: string,
       nested?: Walker.Entities,
     ) => void;
   }
 
-  type ElbLayer = [string?, Elbwalker.PushData?, string?, Walker.Entities?];
+  type ElbLayer = [
+    (IArguments | unknown)?,
+    Elbwalker.PushData?,
+    string?,
+    Walker.Entities?,
+  ];
   type PushData = AnyObject | WebDestination.Function;
 
   interface Config {
