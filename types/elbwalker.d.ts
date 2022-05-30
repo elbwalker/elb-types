@@ -22,6 +22,7 @@ export declare namespace Elbwalker {
   type PushData = AnyObject | WebDestination.Function;
 
   interface Config {
+    prefix: string;
     custom?: boolean;
     projectId?: string;
     version?: number;
