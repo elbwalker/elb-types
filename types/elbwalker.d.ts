@@ -4,13 +4,14 @@ import { Walker } from './walker';
 
 export declare namespace Elbwalker {
   interface Function {
-    go: (config?: Config) => void;
+    go: (config?: Partial<Config>) => void;
     push: (
       event?: IArguments | unknown,
       data?: PushData,
       trigger?: string,
       nested?: Walker.Entities,
     ) => void;
+    config: Config;
   }
 
   type ElbLayer = [
@@ -57,6 +58,7 @@ export declare namespace Elbwalker {
     Config = 'config',
     Consent = 'consent',
     Destination = 'destination',
+    Elb = 'elb',
     Globals = 'globals',
     Run = 'run',
     User = 'user',
