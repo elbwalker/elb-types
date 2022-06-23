@@ -60,6 +60,7 @@ export declare namespace Elbwalker {
     Destination = 'destination',
     Elb = 'elb',
     Globals = 'globals',
+    Prefix = 'data-elb',
     Run = 'run',
     User = 'user',
     Walker = 'walker',
