@@ -1,6 +1,6 @@
 {
   "name": "@elbwalker/types",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "All the elbwalker types",
   "author": "elbwalker GmbH <hello@elbwalker.com>",
   "types": "types/index.d.ts",

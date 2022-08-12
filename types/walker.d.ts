@@ -25,8 +25,9 @@ export declare namespace Walker {
   };
 
   type KeyVal = [string, string];
-  type Trigger = 'load' | 'click' | 'visible' | 'submit' | 'wait';
+  type Trigger = 'click' | 'hover' | 'load' | 'submit' | 'visible' | 'wait';
   type Filter = Values | undefined;
+  type Scope = Document | Element;
 
   interface Values {
     [name: string]: string;
